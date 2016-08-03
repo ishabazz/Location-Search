@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B44D0F901D22B2170031EDA6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B44D0F8F1D22B2170031EDA6 /* MapKit.framework */; };
+		B45DC3181D516C48007A6594 /* MapDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45DC3171D516C48007A6594 /* MapDataSource.swift */; };
+		B45DC31A1D516C89007A6594 /* MapSearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B45DC3191D516C89007A6594 /* MapSearchVC.swift */; };
 		B46F1FB21D21B68F008ADA50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46F1FB11D21B68F008ADA50 /* AppDelegate.swift */; };
 		B46F1FB41D21B68F008ADA50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B46F1FB31D21B68F008ADA50 /* ViewController.swift */; };
 		B46F1FB71D21B68F008ADA50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B46F1FB51D21B68F008ADA50 /* Main.storyboard */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B44D0F8F1D22B2170031EDA6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		B45DC3171D516C48007A6594 /* MapDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapDataSource.swift; sourceTree = "<group>"; };
+		B45DC3191D516C89007A6594 /* MapSearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapSearchVC.swift; sourceTree = "<group>"; };
 		B46F1FAE1D21B68F008ADA50 /* Testing-MapsSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Testing-MapsSearch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B46F1FB11D21B68F008ADA50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B46F1FB31D21B68F008ADA50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B44D0F901D22B2170031EDA6 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +81,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B44D0F8E1D22B2170031EDA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B44D0F8F1D22B2170031EDA6 /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B46F1FA51D21B68F008ADA50 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +96,7 @@
 				B46F1FC51D21B68F008ADA50 /* Testing-MapsSearchTests */,
 				B46F1FD01D21B68F008ADA50 /* Testing-MapsSearchUITests */,
 				B46F1FAF1D21B68F008ADA50 /* Products */,
+				B44D0F8E1D22B2170031EDA6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +115,8 @@
 			children = (
 				B46F1FB11D21B68F008ADA50 /* AppDelegate.swift */,
 				B46F1FB31D21B68F008ADA50 /* ViewController.swift */,
+				B45DC3191D516C89007A6594 /* MapSearchVC.swift */,
+				B45DC3171D516C48007A6594 /* MapDataSource.swift */,
 				B46F1FB51D21B68F008ADA50 /* Main.storyboard */,
 				B46F1FB81D21B68F008ADA50 /* Assets.xcassets */,
 				B46F1FBA1D21B68F008ADA50 /* LaunchScreen.storyboard */,
@@ -196,6 +214,11 @@
 						DevelopmentTeam = ATZFQJSAHX;
 						DevelopmentTeamName = "Illuminated Bits LLC";
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					B46F1FC11D21B68F008ADA50 = {
 						CreatedOnToolsVersion = 8.0;
@@ -265,8 +288,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B45DC31A1D516C89007A6594 /* MapSearchVC.swift in Sources */,
 				B46F1FB41D21B68F008ADA50 /* ViewController.swift in Sources */,
 				B46F1FB21D21B68F008ADA50 /* AppDelegate.swift in Sources */,
+				B45DC3181D516C48007A6594 /* MapDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,10 +439,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Testing-MapsSearch/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.illuminatedbits.Testing-MapsSearch";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.illuminatedbits.Location-Search";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -426,10 +455,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Testing-MapsSearch/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.illuminatedbits.Testing-MapsSearch";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.illuminatedbits.Location-Search";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -503,6 +536,7 @@
 				B46F1FD81D21B68F008ADA50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B46F1FD91D21B68F008ADA50 /* Build configuration list for PBXNativeTarget "Testing-MapsSearchTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +545,7 @@
 				B46F1FDB1D21B68F008ADA50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B46F1FDC1D21B68F008ADA50 /* Build configuration list for PBXNativeTarget "Testing-MapsSearchUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +554,7 @@
 				B46F1FDE1D21B68F008ADA50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

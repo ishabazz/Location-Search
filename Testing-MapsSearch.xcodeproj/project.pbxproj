@@ -211,7 +211,6 @@
 				TargetAttributes = {
 					B46F1FAD1D21B68F008ADA50 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = ATZFQJSAHX;
 						DevelopmentTeamName = "Illuminated Bits LLC";
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -441,6 +440,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Testing-MapsSearch/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.illuminatedbits.Location-Search";
@@ -457,6 +457,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Testing-MapsSearch/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.illuminatedbits.Location-Search";
